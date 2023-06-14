@@ -6,3 +6,5 @@ for i in range(len(argv) - 1):
     result += int(argv[i + 1])
 
 print(result)
+
+if __name__ == "__main__":

@@ -9,3 +9,5 @@ else:
     print("{} arguments:" .format(args))
     for i in range(args):
         print("{}: {}" .format(i + 1, argv[i + 1]))
+
+if __name__ == "__main__":
