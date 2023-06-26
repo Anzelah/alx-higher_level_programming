@@ -8,6 +8,5 @@ def safe_print_list(my_list=[], x=0):
                 length += 1
         print()
         return (length)
-    except:
-        print("An unknown error")
-
+    except Exception:
+        print("An unknown  error occured")
