@@ -2,14 +2,13 @@
 """Define class MagicClass matching bytecode provided."""
 
 import math
-"""import module fo math opeartions."""
+"""import module fo math operations."""
 
 
 class MagicClass:
     """Initializing the class magicclass."""
 
     def __init__(self, radius=0):
-        self.__radius = 0
 
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
