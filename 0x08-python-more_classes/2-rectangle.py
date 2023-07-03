@@ -8,8 +8,8 @@ class Rectangle:
         """Initialize the rectangle.
         Define the rectangle attributes/variables."""
 
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -47,10 +47,6 @@ class Rectangle:
 
     def perimeter(self):
         """Find the perimeter of the rectangle."""
-
-        return (self.__width + self.__height) * 2
-
-        width = 0
-        height = 0
-        if width == 0 or height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
+        return (self.__width + self.__height) * 2
