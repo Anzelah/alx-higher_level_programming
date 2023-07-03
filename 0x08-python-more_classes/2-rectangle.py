@@ -8,8 +8,8 @@ class Rectangle:
         """Initialize the rectangle.
         Define the rectangle attributes/variables."""
 
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
