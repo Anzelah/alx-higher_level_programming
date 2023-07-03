@@ -60,5 +60,5 @@ class Rectangle:
         for _ in range(self.__height):
             rstr += '#' * self.__width + '\n'
         rstr = rstr.strip()
-        
+
         return rstr
