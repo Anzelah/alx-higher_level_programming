@@ -59,6 +59,6 @@ class Rectangle:
         rstr = ""
         for _ in range(self.__height):
             rstr += '#' * self.__width + '\n'
-        rstr = rstr.strip()
+        rstr = rstr.strip()  # removes extra newline after printing
 
         return rstr
