@@ -11,8 +11,10 @@ python_list = []
 if __name__ == "__main__":
     """Function to import code as script."""
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    """Function to save a json file."""
     load_from_json_file = \
         __import__('6-load_from_json_file').load_from_json_file
+    """Function to load a json file."""
 
     try:
         python_list = load_from_json_file("add_item.json")
