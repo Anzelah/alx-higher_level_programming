@@ -2,29 +2,20 @@
 """Defines a module."""
 
 
-import json
 import sys
 """Imports a module."""
 
 python_list = []
 
-
-def save_to_json_file(my_obj, filename):
-    """A function to write an object to text file."""
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(my_obj, f)
-
-
-def load_from_json_file(filename):
-    """Function to create an object from a json file."""
-    with open(filename, encoding="utf-8") as f:
-        obj = json.load(f)
-    return obj
+if __name__ == "__main__":
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = \
+        __import__('6-load_from_json_file').load_from_json_file
 
     try:
         python_list = load_from_json_file("add_item.json")
     except Exception:
-        pass
+        python_list = []
 
 
 another_list = sys.argv[1:]
