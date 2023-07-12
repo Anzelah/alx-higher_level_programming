@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Defines a module."""
+"""Add arguments to a list."""
 
 
 import sys
-"""Imports a module."""
+"""Imports the sys module."""
 
 
 python_list = []
