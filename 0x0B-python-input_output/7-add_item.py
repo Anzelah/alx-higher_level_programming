@@ -28,7 +28,6 @@ def load_from_json_file(filename):
     else:
         python_list = []
 
-another_list = sys.argv[1:]
-new_list = python_list + another_list
 
-save_to_json_file(new_list, "add_item.json")
+python_list.extend(sys.argv[1:])
+save_to_json_file(python_list, "add_item.json")
