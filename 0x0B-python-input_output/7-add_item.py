@@ -8,13 +8,18 @@ import sys
 
 python_list = []
 
-if __name__ == "__main__":
-    """Function to import code as script."""
-    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-    """Function to save a json file."""
-    load_from_json_file = \
-        __import__('6-load_from_json_file').load_from_json_file
-    """Function to load a json file."""
+
+def save_to_json_file(my_obj, filename):
+    """A function to write an object to text file."""
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
+
+
+def load_from_json_file(filename):
+    """Function to create an object from a json file."""
+    with open(filename, encoding="utf-8") as f:
+        obj = json.load(f)
+    return obj
 
     try:
         python_list = load_from_json_file("add_item.json")
