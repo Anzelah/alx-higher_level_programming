@@ -18,16 +18,15 @@ def save_to_json_file(my_obj, filename):
 
 def load_from_json_file(filename):
     """Function to create an object from a json file."""
-    with open(filename, encoding="utf-8") as f:
+    try:
+        with open(filename, encoding="utf-8") as f:
         obj = json.load(f)
+    except:
+        obj = []
     return obj
 
-    try:
-        python_list = load_from_json_file("add_item.json")
-    except Exception:
-        python_list = []
-
-
+python_list = load_from_json_file("add_item.json")
 another_list = sys.argv[1:]
 new_list = python_list + another_list
+
 save_to_json_file(new_list, "add_item.json")
