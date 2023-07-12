@@ -4,6 +4,7 @@
 
 import json
 import sys
+import os
 """Imports the sys module."""
 
 
@@ -18,14 +19,15 @@ def save_to_json_file(my_obj, filename):
 
 def load_from_json_file(filename):
     """Function to create an object from a json file."""
-    try:
-        with open(filename, encoding="utf-8") as f:
+    with open(filename, encoding="utf-8") as f:
         obj = json.load(f)
-    except:
-        obj = []
     return obj
 
-python_list = load_from_json_file("add_item.json")
+    if os.path.isfile("add_item.json"):
+        python_list = load_from_json_file("add_item.json")
+    else:
+        python_list = []
+
 another_list = sys.argv[1:]
 new_list = python_list + another_list
 
