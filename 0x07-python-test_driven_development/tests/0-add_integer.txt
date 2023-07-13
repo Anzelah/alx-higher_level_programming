@@ -34,15 +34,15 @@ Traceback (most recent call last):
         ...
 TypeError: b must be an integer
 
->>. add_integer()
+>>> add_integer()
 Traceback (most recent call last):
         ...
-TypeError: missing 2 required positional arguments: 'a' and 'b'
+TypeError: missing two arguments
 
->>. add_integer(10)
+>>> add_integer(10)
 Traceback (most recent call last):
         ...
-TypeError: b must be an integer
+TypeError: add_integer() missing 1 argument
 
 >>> add_integer(float("inf"), 10)
 Traceback (most recent call last):
