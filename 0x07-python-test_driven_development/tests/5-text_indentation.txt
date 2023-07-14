@@ -1,14 +1,19 @@
 text_indentation = __import__('5-text_indentation').text_indentation
 
 >>>text_indentation("Holberton. School? How are you: John")
-"Holberton"
+Holberton
 
-"School"
+.
 
-"How are you"
+School
 
-"John"
+?
 
+How are you
+
+:
+
+John
 >>> text_indentation(789)
 Traceback (most recent call last):
         ...
