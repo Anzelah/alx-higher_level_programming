@@ -37,7 +37,7 @@ TypeError: b must be an integer
 >>> add_integer()
 Traceback (most recent call last):
         ...
-TypeError: missing two arguments
+TypeError: add_integer() missing 2 arguments
 
 >>> add_integer(10)
 Traceback (most recent call last):
