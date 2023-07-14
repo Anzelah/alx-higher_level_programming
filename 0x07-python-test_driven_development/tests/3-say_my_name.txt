@@ -1,4 +1,4 @@
-say_my_name = __import__("tests.3-say_my_name").say_my_name
+say_my_name = __import__("0x07-python-test_driven_development.3-say_my_name").say_my_name
 
 >>> say_my_name ("first_name", "last_name")
 'first_name, last_name'
