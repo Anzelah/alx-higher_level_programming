@@ -62,6 +62,12 @@ class Rectangle(Base):
         """Return the area of the rectangle."""
         return self.__width * self.__height
 
+    def display(self):
+        """Print the rectangle instance with character #."""
+
+        for _ in range(self.__height):
+            print('#' * self.__width)
+
     @staticmethod
     def validate_setters(attribute, value):
         """Validate all setter methods and instantiation."""
