@@ -64,9 +64,13 @@ class Rectangle(Base):
 
     def display(self):
         """Print the rectangle instance with character #."""
-
         for _ in range(self.__height):
-            print('#' * self.__width)
+            print("#" * self.__width)
+
+    def __str__(self):
+        """Overide the str method."""
+        return ("[Rectangle] ({}) {}/{} - {}/{}" .format(self.id, self.x,
+                self.y, self.width, self.height))
 
     @staticmethod
     def validate_setters(attribute, value):
