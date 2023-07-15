@@ -58,6 +58,10 @@ class Rectangle(Base):
         self.validate_setters("y", value)
         self.__y = value
 
+    def area(self):
+        """Return the area of the rectangle."""
+        return self.__width * self.__height
+
     @staticmethod
     def validate_setters(attribute, value):
         """Validate all setter methods and instantiation."""
