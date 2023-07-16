@@ -26,6 +26,13 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """A function to convert from json string to object."""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Write the json representation to a file."""
@@ -37,8 +44,8 @@ class Base:
         data = []
         for objects in list_objs:
             objects = objects.to_dictionary()
-            json_string = json.loads(cls.to_json_string(objects))
-            data.append(json_string)
+            thejson_string = json.loads(cls.to_json_string(objects))
+            data.append(thejson_string)
 
         with open(filename, 'w', encoding="utf-8") as f:
             json.dump(data, f)
