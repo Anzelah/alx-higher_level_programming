@@ -34,11 +34,6 @@ class Base:
         if list_objs is None:
             list_objs = []
 
-        data = []
-        for objects in list_objs:
-            objects = objects.to_dictionary()
-            json_string = json.loads(cls.to_json_string(objects))
-            data.append(json_string)
-
-        with open(filename, 'w', encoding="utf-8") as f:
-            json.dump(data, f)
+        the_string = cls.to_json_string(list_objs)
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(the_string)
