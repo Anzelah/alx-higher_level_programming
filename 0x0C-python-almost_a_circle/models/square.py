@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """A class square."""
+
+
 from models.rectangle import Rectangle
+"""Import a module from parent Rectangle."""
 
 
 class Square(Rectangle):
