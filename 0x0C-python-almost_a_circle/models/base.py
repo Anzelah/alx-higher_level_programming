@@ -56,10 +56,28 @@ class Base:
 
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(10, 6)
-
         elif cls.__name__ == "Square":
             dummy_instance = cls(5)
 
         dummy_instance.update(**dictionary)
 
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Return a list of instances."""
+
+        filename = cls.__name__ + ".json"
+
+        try:
+            with open(filename, encoding="utf-8") as f:
+                obj = cls.from_json_string(f.read())
+        except Exception:
+            return []
+
+        instance_list = []
+        for instance in obj:
+            inst = cls.create(**instance)
+            instance_list.append(inst)
+
+        return instance_list
