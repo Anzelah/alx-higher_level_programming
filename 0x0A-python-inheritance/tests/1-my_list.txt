@@ -1,0 +1,11 @@
+MyList = __import__('1-my_list').MyList
+
+>>> check_list = MyList()
+>>> type(check_list) == MyList
+True
+
+>>> check_list = MyList()
+>>> isinstance(check_list, list)
+True
+
+
