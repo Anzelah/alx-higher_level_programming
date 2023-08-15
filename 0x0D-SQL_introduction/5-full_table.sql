@@ -1,2 +1,2 @@
 -- print a full description of a table from a database
-SHOW first_
+SHOW TABLE first_table
