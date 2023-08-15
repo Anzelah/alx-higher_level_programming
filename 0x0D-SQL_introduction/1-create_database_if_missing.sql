@@ -2,5 +2,5 @@
 CREATE DATABASE hbtn_0c_0
 IF DB_ID('hbtn_0c_0') IS NOT NULL
 BEGIN
-	return 0
+	return 1
 END
