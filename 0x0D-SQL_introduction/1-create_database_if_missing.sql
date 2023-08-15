@@ -1,2 +1,2 @@
 -- create a database in MySQL server
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
+WHERE NOT EXISTS CREATE DATABASE hbtn_0c_0;
