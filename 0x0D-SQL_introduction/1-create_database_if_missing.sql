@@ -1,7 +1,8 @@
 -- create a database in MySQL server
+CREATE DATABASE hbtn_0c_0
 IF DB_ID('hbtn_0c_0') IS NULL
 BEGIN
-	CREATE DATABASE hbtn_0c_0;
+	RETURN 0;
 END
 ELSE
 BEGIN
