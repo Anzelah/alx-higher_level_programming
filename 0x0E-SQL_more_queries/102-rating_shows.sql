@@ -3,9 +3,9 @@
 SELECT name, SUM(rate) AS rating
 FROM tv_genres AS g
 INNER JOIN tv_show_genres AS sg
-ON g.id = sg.genre_id
+ON sg.genre_id = g.id
 
 INNER JOIN tv_show_ratings AS r
-ON sg.show_id = r.show_id
+ON r.show_id = sg.show_id
 GROUP BY name
 ORDER BY rating DESC;
