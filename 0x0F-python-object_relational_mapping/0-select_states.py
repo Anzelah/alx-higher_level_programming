@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""Import modules to use"""
+"""Defines a module"""
+
+
 import MySQLdb
 import sys
-"""Imported modules to use"""
+"""Imported modules mysql and sys modules."""
 
 
 def list_states(username, password, db_name):
