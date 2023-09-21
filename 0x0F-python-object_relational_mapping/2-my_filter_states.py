@@ -5,12 +5,11 @@ import sys
 
 def list_states(username, password, db_name, state_name):
     """get all the states from the database"""
-    name_searched = input()
     db = MySQLdb.connect(host="localhost", user=username, passwd=
                          password, db=db_name, port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC" .format(name_searched,))
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC" .format(state_name,))
     results = cur.fetchall()
     for res in results:
         print(res)
