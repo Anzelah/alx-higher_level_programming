@@ -18,8 +18,11 @@ def list_states(username, password, db_name, state_name):
         ORDER BY cities.id ASC
     """, (state_name, ))
     results = cur.fetchall()
+    cities = ""
     for res in results:
-        print(res)
+        for col in res:
+            cities += (col) + ", "
+    print(cities[:-2])
     cur.close()
     db.close()
 
