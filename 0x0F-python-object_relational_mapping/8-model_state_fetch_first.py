@@ -18,9 +18,8 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State)[:1]
-    for r in results:
-        if r is None:
-            pass
-        else:
-            print("{}: {}" .format(r.id, r.name))
+    r = session.query(State).first()
+    if r is None:
+        pass
+    else:
+        print("{}: {}" .format(r.id, r.name))
