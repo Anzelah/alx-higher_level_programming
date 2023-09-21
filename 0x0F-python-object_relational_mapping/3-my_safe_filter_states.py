@@ -9,7 +9,8 @@ def list_states(username, password, db_name, state_name):
                          password, db=db_name, port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC" .format(state_name,))
+
+    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC", (state_name,))
     results = cur.fetchall()
     for res in results:
         if (state_name in res[1]):
