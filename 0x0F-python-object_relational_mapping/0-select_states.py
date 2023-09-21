@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""Defines a module"""
-
-
 import MySQLdb
 import sys
 """Imported modules mysql and sys modules."""
-
 
 def list_states(username, password, db_name):
     """get all the states from the database"""
@@ -22,7 +18,6 @@ def list_states(username, password, db_name):
 
 
 if __name__ == "__main__":
-    """Prevent exprtation."""
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
