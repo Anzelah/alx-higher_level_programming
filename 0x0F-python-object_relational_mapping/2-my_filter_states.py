@@ -12,7 +12,8 @@ def list_states(username, password, db_name, state_name):
     cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC" .format(state_name,))
     results = cur.fetchall()
     for res in results:
-        print(res)
+        if res[1].lower() == state_name.lower():
+            print(res)
 
     cur.close()
     db.close()
