@@ -3,7 +3,6 @@
 import MySQLdb
 import sys
 
-
 def list_states(username, password, db_name):
     """get all the states from the database"""
     db = MySQLdb.connect(host="localhost", user=username,
