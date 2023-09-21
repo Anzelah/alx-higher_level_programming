@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State).order_by(State.id)[:1]
+    results = session.query(State)[:1]
     for r in results:
         if r is None:
             pass
