@@ -1,13 +1,12 @@
 #!/usr/bin/python3
+"""Import modules"""
 import MySQLdb
 import sys
-"""Imported modules mysql and sys modules."""
 
 def list_states(username, password, db_name):
     """get all the states from the database"""
-    db = MySQLdb.connect(host="localhost", user=username,
-                         passwd=password, db=db_name,
-                         port=3306)
+    db = MySQLdb.connect(host="localhost", user=username, passwd=
+                         password, db="hbtn_0e_0_usa", port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     results = cur.fetchall()
