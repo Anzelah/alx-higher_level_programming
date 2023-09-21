@@ -11,7 +11,8 @@ def filter_states(username, password, db_name):
     cur.execute("SELECT DISTINCT * FROM states WHERE NAME LIKE 'N%' ORDER BY states.id ASC")
     results = cur.fetchall()
     for res in results:
-        print(res)
+        if ("N" in res[1]):
+            print(res)
 
     cur.close()
     db.close()
