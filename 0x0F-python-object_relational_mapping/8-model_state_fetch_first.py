@@ -20,6 +20,6 @@ if __name__ == "__main__":
     session = Session()
     r = session.query(State).first()
     if r is None:
-        pass
+        print("Nothing")
     else:
         print("{}: {}" .format(r.id, r.name))
