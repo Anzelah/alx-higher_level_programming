@@ -19,7 +19,7 @@ def list_states(username, password, db_name, state_name):
     """, (state_name, ))
     results = cur.fetchall()
     for res in results:
-        print(res[0])
+        print(res)
     cur.close()
     db.close()
 
