@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    old_state = session.query(State).filter(State.id == 2).i \
+    old_state = session.query(State).filter(State.id == 2). \
         order_by(State.id).first()
     if old_state:
         old_state.name = 'New Mexico'
