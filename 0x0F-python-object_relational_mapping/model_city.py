@@ -2,8 +2,12 @@
 """Import modules"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
 
+#engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+#                           .format(username, password, db_name),
+#                           pool_pre_ping=True)
 Base = declarative_base()
 
 
@@ -12,5 +16,4 @@ class City(Base):
     __tablename__ = "cities"
     id = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id', nullable=False))
-#    state = relationship("State", back_populates="cities")
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
