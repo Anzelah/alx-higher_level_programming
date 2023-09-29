@@ -9,9 +9,9 @@ if __name__ == "__main__":
 
     try:
         req = requests.get(url)
-        content = req.text
-        print("{}" .format(content))
+        req.raise_for_status()
     except requests.HTTPError as e:
-        code = req.status_code
-        if code >= 400:
-            print("Error code: {}" .format(code))
+        print("Error code: {}" .format(e.response.status_code))
+        sys.exit(0)
+
+    print("{}" .format(req.text))
