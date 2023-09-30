@@ -16,10 +16,10 @@ if __name__ == "__main__":
 
     try:
         req = res.json()
-        if req:
-            print("[{}}] {}" .format(req["id"], req["name"]))
+        if (len(req) < 1):
+            print("No results")
         else:
-            print("No result")
-    except ValueError:
+            print("[{}}] {}" .format(req["id"], req["name"]))
+    except:
         print("Not a valid JSON")
 
