@@ -15,13 +15,12 @@ if __name__ == "__main__":
     res = requests.post(url, data=payload)
 
     try:
-        req = res.json()
-        if len(req) == 0:
+        content = res.json()
+        if len(content) == 0:
             print("No result")
             sys.exit()
-        m_id = req.get('id')
-        m_name = req.get('name')
-        print("[{}}] {}" .format(m_id, m_name))
+        m_id = content.get('id')
+        m_name = content.get('name')
+        print("[{}] {}" .format(m_id, m_name))
     except ValueError:
         print("Not a valid JSON")
-
