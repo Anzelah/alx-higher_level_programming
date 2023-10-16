@@ -2,12 +2,8 @@
 """Import modules"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine
-from sqlalchemy.orm import relationship
 
-#engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-#                           .format(username, password, db_name),
-#                           pool_pre_ping=True)
+
 Base = declarative_base()
 
 
